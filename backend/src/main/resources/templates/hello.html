@@ -5,6 +5,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <h1><span>Hello World</span></h1>
+    <div th:each="element: ${elements}">
+        <p th:text="${element.getId()}" />
+        <p th:text="${element.getArticle()}" />
+        <img th:src="${element.getLink()}" width="400" height="400" />
+    </div>
 </body>
 </html>
