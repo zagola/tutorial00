@@ -1,14 +1,20 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head> 
-    <title>Getting Started: Serving Web Content</title> 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ola Zagrabska</title> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100&display=swap" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-    <div th:each="element: ${elements}">
-        <p th:text="${element.getId()}" />
-        <p th:text="${element.getArticle()}" />
-        <img th:src="${element.getLink()}" width="400" height="400" />
+    <div class="header">
+        <h1>O L A | Z A G R A B S K A</h1>
+    </div>
+    <div class="column" th:each="element: ${elements}">
+        <img th:src="${element.getLink()}" />
+        <h2 th:text="${element.getId()}" />
     </div>
 </body>
 </html>
