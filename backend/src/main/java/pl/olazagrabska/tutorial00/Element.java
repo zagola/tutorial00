@@ -13,6 +13,9 @@ public class Element {
     @Column(name = "id")
     private char id;
 
+    @Column(name = "title", length = 100)
+    private String title;
+
     @Column(name = "article")
     private String article;
 
@@ -25,6 +28,13 @@ public class Element {
 
     public char getId() {
         return id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    public String getTitle() {
+        return title;
     }
 
     public void setArticle(String article) {

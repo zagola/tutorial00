@@ -2,6 +2,7 @@
 
 create table articles (
     id character NOT NULL, 
+    title varchar(100) NOT NULL,
     article text NOT NULL,
     link varchar(100)
 );
