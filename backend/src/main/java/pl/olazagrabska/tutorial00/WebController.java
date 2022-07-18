@@ -12,12 +12,12 @@ public class WebController {
     @Autowired
     private ArticlesRepository repository;
 
-    @GetMapping("/hello")
+    @GetMapping("/")
     public String helloWorld(Model model){
         Iterable<Element> elements = repository.findAll();
 
         model.addAttribute("elements", elements);
-        return "hello.html";
+        return "main.html";
     }
     @GetMapping("/content/{id}")
     public String getContentById(Model model, @PathVariable Character id) {
